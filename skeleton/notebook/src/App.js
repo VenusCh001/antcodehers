@@ -18,6 +18,7 @@ import Frontpage from './components/Frontpage';
 import Contact from './components/Contact';
 import LandingPage from './components/LandingPage';
 import Mood_tracker from './components/Mood_tracker';
+import Immersive from './components/immersive';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
               <Route exact path="/chatbot" element={<Chatbot/>} />
               <Route exact path="/contact" element={<Contact/>} />
               <Route exact path="/mood-tracker" element={<Mood_tracker/>} />
+              <Route exact path="/immersive" element={<Immersive/>} />
 
               <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
               <Route exact path="/signup" element={<SignUp showAlert={showAlert}/>} />

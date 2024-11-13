@@ -30,7 +30,7 @@ export default function About() {
         <div className="card">
           <img
             src="https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2022/09/21101527/STILL_002.jpg"
-            alt="Immersive Meditation Space 123"
+            alt="Immersive Meditation Space 1234"
           />
           <div className="card-content">
             <h3>Immersive Meditation Space</h3>
