@@ -446,7 +446,7 @@ const Immersive = () => {
       </a>
       <br/>
       <a href="/meditationroom/index.html"  rel="noopener noreferrer">
-        Go to the HTML page 2
+        go to meditationroom 
       </a>
     </div>
   );
