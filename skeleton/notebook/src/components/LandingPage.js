@@ -1,24 +1,38 @@
-import React from 'react'
-import './css/front.css'
-export default function Frontpage() {
+// components/LandingPage.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './css/LandingPage.css';
+const LandingPage = () => {
     return (
         <div>
-
-
-           
-
+            {/* <header>
+                <nav className="navbar">
+                    <div className="logo">
+                        <span className="logo-part-2">MIND MATES</span>
+                    </div>
+                    <ul className="nav-links">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About us</Link></li>
+                        <li><a href="/immersive">Immersive</a></li>
+                        <li><a href="/meditationroom">Meditation Room</a></li>
+                        <li><a href="/mood-status">Mood Status</a></li>
+                        <li><a href="/frontpage">Personal</a></li>
+                        <li><a href="/contact" className="get-started">HELPLINE</a></li>
+                    </ul>
+                </nav>
+            </header> */}
 
             <section className="hero">
                 <div className="hero-content">
-                    
-                    <p>" i am vidhi It's okay to not be okay. Together, we'll find your way to a healthier and happier you."</p>
-                    
+                    <h1>Mind Mates</h1>
+                    <p>"It's okay to not be okay. Together, we'll find your way to a healthier and happier you."</p>
+                    <button className="cta-button">Button Name</button>
                 </div>
                 <div className="hero-image">
-
                     <img src="https://plmr.co.uk/wp-content/uploads/2023/05/shutterstock_1959507154-scaled.jpg" alt="Website Design Illustration" />
                 </div>
             </section>
+
             <section className="gallery">
                 <h2>Our Mission</h2>
                 <p>"Mental Health Matters -- Every Mind, Every Journey."</p>
@@ -29,7 +43,8 @@ export default function Frontpage() {
                     <img src="https://img.freepik.com/premium-vector/brains-heart-are-connected-heart-brain-work-together_153097-4562.jpg?w=2000" alt="Image 4" />
                 </div>
             </section>
-
-        </div >
-    )
+        </div>
+    );
 }
+
+export default LandingPage;

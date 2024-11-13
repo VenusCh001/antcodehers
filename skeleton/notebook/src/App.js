@@ -16,6 +16,8 @@ import { useState } from 'react';
 import Chatbot from './components/Chatbot';
 import Frontpage from './components/Frontpage';
 import Contact from './components/Contact';
+import LandingPage from './components/LandingPage';
+import Mood_tracker from './components/Mood_tracker';
 
 
 function App() {
@@ -31,18 +33,22 @@ function App() {
   }
   return (
     <>
+
       <NoteSate>
         
         <Router>
           <Navbar />
-          <Alert alert={alert}/>
+          
+          {/* <Alert alert={alert}/> */}
           <div className='container'>
             <Routes>
-              <Route exact path="/" element={<Home showAlert={showAlert} />} />
-              <Route exact path="/frontpage" element={<Frontpage/>} />
+              <Route exact path="/Home" element={<Home showAlert={showAlert} />} />
+              <Route exact path="/" element={<LandingPage showAlert={showAlert} />} />
+              {/* <Route exact path="/LandingPage" element={<LandingPage/>} /> */}
               <Route exact path="/about" element={<About />} />
               <Route exact path="/chatbot" element={<Chatbot/>} />
               <Route exact path="/contact" element={<Contact/>} />
+              <Route exact path="/mood-tracker" element={<Mood_tracker/>} />
 
               <Route exact path="/login" element={<Login showAlert={showAlert}/>} />
               <Route exact path="/signup" element={<SignUp showAlert={showAlert}/>} />
