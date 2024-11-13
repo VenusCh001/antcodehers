@@ -1,8 +1,8 @@
 
 var index = 0;
-var videoSrc = ["src: #video0", "src: #video1", "src: #video2"];
-var videos = ["#video0", "#video1", "#video2"];
-var audios = ["#audio0", "#audio1", "#audio2"];
+var videoSrc = ["src: #video0", "src: #video1", "src: #video2","src: #video3"];
+var videos = ["#video0", "#video1", "#video2","#video3"];
+var audios = ["#audio0", "#audio1", "#audio2","#audio3"];
 
 function playVideo(){
   document.querySelector('a-videosphere').setAttribute('material', videoSrc[index]);
