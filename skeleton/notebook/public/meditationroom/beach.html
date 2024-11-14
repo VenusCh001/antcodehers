@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- As if this Glitch were a typical HTML CodePen... -->    
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    
+    <!-- Use components defined in separate files. -->
+    <script src="arrow-key-rotation.js"></script>
+    <script src="play-on-window-click.js"></script>
+    <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script>
+    <script src="hide-once-playing.js"></script>
+
+    <!-- Specify our scene. -->
+    <a-scene>
+      <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
+      <a-videosphere id = "vsphere" rotation="0 180 0" src="#video" 
+                     play-on-window-click
+                     play-on-vrdisplayactivate-or-enter-vr>
+      </a-videosphere>
+      <!--<a-sound id = "sound" volume = "3" src="#audio" autoplay="true"
+    position="0 0 0" play-on-window-click ></a-sound>-->
+      
+      <a-sphere onclick = "changeScene()" position="0 -5 0" radius="1.25" color="#ffffff" visible = "false"></a-sphere>
+      
+      <a-cylinder color="white" onclick = "window.location.href='index.html';" material="side: double" position="-4 -5 0" height = "0.2"  rotation="0 10 0"></a-cylinder>
+      <a-entity id="exitText" position= "-4 -4.8 0" rotation = "-80 0 0" text="align:center; 
+                width:40 ;
+                wrapCount:100;
+                color:red;
+                value:EXIT;
+                font: exo2bold;">
+        </a-entity>
+      
+      <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+      <a-camera user-height="0" wasd-controls-enabled="false" arrow-key-rotation>
+        <!-- Text element for display messaging.  Hide once video is playing. -->
+        <a-entity id="msg" position="0 -0.3 -1.5" text="align:center; 
+                width:3;
+                wrapCount:100;
+                color:white;
+                value:Please look down to change scene or exit"
+                hide-once-playing="#video">
+        </a-entity>
+        <a-entity cursor="fuse: true; fuseTimeout: 1500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.023"
+            material="color: black; shader: flat">
+        </a-entity>
+      </a-camera>      
+      
+      <!-- Wait for the video to load. -->
+      <a-assets>
+        <!-- Single source video. -->
+        <video id="video" style="display:none" preload="auto"
+                loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. 1-->
+          <source type="video/mp4"
+               src="https://cdn.glitch.com/45fdcef8-02ac-4e6d-8490-30e070fdc47f%2Fbeach_human_voice_2.mp4?1555702692075" />
+        </video>
+        <video id="video1" style="display:none" preload="auto"
+               loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source.2 -->
+          <source type="video/mp4"
+               src="https://cdn.glitch.com/45fdcef8-02ac-4e6d-8490-30e070fdc47f%2Fwaterfall_human_voice_2.mp4?1555702512950" />
+        </video>
+        <video id="video2" style="display:none" preload="auto"
+               loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. 3-->
+          <source type="video/mp4"
+               src="https://cdn.glitch.com/45fdcef8-02ac-4e6d-8490-30e070fdc47f%2Fcity_human_voice_2.mp4?1555702999285" />
+        </video>
+        <audio id="audio" src = "https://cdn.glitch.com/858eae5d-8353-4b6c-ab8a-4f4614fce5c5%2F1stMedit.mp3?1555616741799" ></audio>
+      </a-assets>
+    </a-scene>
+    
+    
+    <!-- Show a button to switch to the multi-source example that shows detail. -->
+  </body>
+  
+  <!--<script type="text/javascript" >
+  document.querySelector('a-scene').enterVR();
+  document.getElementsByTagName("a-videosphere").components.material.material.map.image.play();
+  </script>-->
+</html>
