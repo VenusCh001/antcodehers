@@ -5,22 +5,7 @@ import './css/LandingPage.css';
 const LandingPage = () => {
     return (
         <div>
-            {/* <header>
-                <nav className="navbar">
-                    <div className="logo">
-                        <span className="logo-part-2">MIND MATES</span>
-                    </div>
-                    <ul className="nav-links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About us</Link></li>
-                        <li><a href="/immersive">Immersive</a></li>
-                        <li><a href="/meditationroom">Meditation Room</a></li>
-                        <li><a href="/mood-status">Mood Status</a></li>
-                        <li><a href="/frontpage">Personal</a></li>
-                        <li><a href="/contact" className="get-started">HELPLINE</a></li>
-                    </ul>
-                </nav>
-            </header> */}
+            
 
             <section className="hero">
                 <div className="hero-content">

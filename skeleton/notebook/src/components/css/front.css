@@ -11,43 +11,12 @@ body {
     color: #333;
 }
 
-/* header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-} */
-
-/* .navbar {
-    padding: 40px 50px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: hsl(191, 88%, 65%);
-    position: relative;
-    height: 30px;
-    font-weight: bold;
-
-    
-} */
 section {
     width: 100%;
 }
-/* Styling the logo */
-.logo {
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-}
 
 
-.logo-part-2 {
-    padding: 5px 10px;
-    border: 2px solid #761ba3;
-    clip-path: polygon(1% 0%, 100% 0%, 99% 100%, 0% 100%);
-    font-weight: bolder;
-}
+
 
 /* .nav-links {
     list-style: none;
@@ -123,11 +92,6 @@ front.css
 }
 
 
-.logo-part-2 {
-    background: linear-gradient(45deg, #c317af, #d31bb2); /* Red gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 
 /* Navigation links */
