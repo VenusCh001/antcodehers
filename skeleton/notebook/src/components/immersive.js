@@ -5,40 +5,40 @@ const Immersive = () => {
   return (
     <div>
       <div className="centered-container">
-      <h1 className="heading">INSTRUCTION</h1>
-    </div>
+        <h1 className="heading">INSTRUCTION</h1>
+      </div>
       <center>
-      <p className="subheading">
-        <ol>
-<li>use arrow keys to falana dhimakanananflfsf </li>
-<li>use arrow keys to falana dhimakanananflfsf </li>
-<li>use arrow keys to falana dhimakanananflfsf </li>
+        <p className="subheading">
+          <ul>
+            <li>1.use arrow keys to falana dhimakanananflfsf </li>
+            <li>2.use arrow keys to falana dhimakanananflfsf </li>
+            <li>3.use arrow keys to falana dhimakanananflfsf </li>
 
-        </ol>
-         
+          </ul>
+
         </p>
       </center>
       <center>
-      <div className="buttons">
-        <a href="immersive.html">
-          <button className="btn-tour">Virtual Room   </button>
-        </a>
-        <a href="/meditationroom/index.html">
-          <button className="btn-tour">Meditation room  </button>
-        </a>
-      </div>
+        <div className="buttons">
+          <a href="immersive.html">
+            <button className="btn-tour">Virtual Room   </button>
+          </a>
+          <a href="/meditationroom/index.html">
+            <button className="btn-tour">Meditation room  </button>
+          </a>
+        </div>
 
-         { /* <div className="buttons">
+        { /* <div className="buttons">
             <button className="btn-tour" href="immersive.html" >Become a Member</button>
             <button className="btn-tour">Schedule a Tour</button>
          </div> */}
       </center>
-      
+
     </div>
   );
 };
 
-export default Immersive;
+export default Immersive;
 
 
 // import React from 'react';
