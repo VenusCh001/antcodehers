@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f9ff; /* Light blue background */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #cce7ff; /* Light blue header */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    color: #004080; /* Darker blue for contrast */
+}
+
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h2 {
+    color: #004080;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+main p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Button */
+button {
+    background-color: #004080; /* Dark blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0066cc; /* Brighter blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #cce7ff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
