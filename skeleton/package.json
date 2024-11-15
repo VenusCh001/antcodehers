@@ -7,6 +7,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@react-three/drei": "^9.116.2",
+    "@react-three/fiber": "^8.17.10",
     "array-union": "^1.0.2",
     "array-uniq": "^1.0.3",
     "async": "^3.2.6",
@@ -45,6 +47,8 @@
     "pkg-dir": "^4.2.0",
     "semver": "^6.3.1",
     "strip-outer": "^1.0.1",
+    "three": "^0.170.0",
+    "three-stdlib": "^2.34.0",
     "trim-repeated": "^1.0.0",
     "universalify": "^2.0.1",
     "wrappy": "^1.0.2"
@@ -53,11 +57,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-   
-    
-    
-  
-    
   },
   "author": "",
   "license": "ISC",

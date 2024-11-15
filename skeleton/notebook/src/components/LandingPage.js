@@ -37,8 +37,14 @@
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, useGLTF } from '@react-three/drei';
 import './css/LandingPage.css';
+
+function Model({ url }) {
+  const { scene } = useGLTF(url);
+  return <primitive object={scene} scale={[2.5,2.3,2.5]} />;
+}
 
 const LandingPage = () => {
     return (
@@ -51,7 +57,13 @@ const LandingPage = () => {
                         <button className="cta-button">Button Name</button>
                     </div>
                     <div className="hero-image">
-                        <img src="https://plmr.co.uk/wp-content/uploads/2023/05/shutterstock_1959507154-scaled.jpg" alt="Website Design Illustration" />
+                        {/* React Three Fiber Canvas for 3D Model */}
+                        <Canvas style={{ width: '100%', height: '400px' }}>
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[10, 10, 5]} intensity={1} />
+                            <Model url="https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/A_butterfly_fairy_H_1115152627_refine.glb?v=1731684551186" />
+                            <OrbitControls />
+                        </Canvas>
                     </div>
                 </div>
             </section>
@@ -71,4 +83,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage;
-
