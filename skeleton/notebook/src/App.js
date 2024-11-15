@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useState, useRef, useEffect } from 'react';
+
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -34,13 +35,12 @@ function App() {
       setAlert(null);
     }, 1500);
   };
-
+  
   const handleRouteChange = () => {
     if (loadingBarRef.current) {
       loadingBarRef.current.complete(); // Completes loading bar after the route is loaded
     }
   };
-
   const LoadingBarHandler = () => {
     const location = useLocation(); // This hook gives us access to location change
 
