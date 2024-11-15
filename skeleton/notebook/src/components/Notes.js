@@ -77,9 +77,10 @@ export default function Notes(props) {
             </div>
             <div className='row my-3'>
                 
-                <div className="container ">
+                <div className="my-4 ">
                     <h2 >Your Feelings</h2>
                 </div>
+                
                 <div className='container'>
                     {notes.length === 0 && 'No notes to be displayed'}
                 </div>
