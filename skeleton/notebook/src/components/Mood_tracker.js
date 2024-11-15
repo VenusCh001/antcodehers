@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
+import './css/mood.css';
 import { useNavigate } from 'react-router-dom';
 // import './css/style.css'
 const MoodTracker = () => {
