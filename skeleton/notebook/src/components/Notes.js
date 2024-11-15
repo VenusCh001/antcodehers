@@ -79,11 +79,10 @@ export default function Notes(props) {
                 
                 <div className="my-4 ">
                     <h2 >Your Feelings</h2>
-                </div>
-                
-                <div className='container'>
                     {notes.length === 0 && 'No notes to be displayed'}
                 </div>
+                
+               
                 {notes.map((note) => {
                     return <Noteitem note={note} updatenote={updatenote} showAlert={props.showAlert} />
                 })}
