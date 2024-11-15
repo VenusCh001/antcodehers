@@ -41,12 +41,9 @@
 
 import React from 'react';
 import "./css/immersive.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import the styles
+
 const Immersive = () => {
-  const handleClick = () => {
-    toast('Hello, world!');
-  };
+ 
   return (
     <div>
       <div className="centered-container">
@@ -69,8 +66,8 @@ const Immersive = () => {
           <a href="/meditationroom/index.html">
             <button className="btn-tour">Meditation Room</button>
           </a>
-          <button className="btn-tour" onClick={handleClick}>Meditation Room</button>
-          <ToastContainer />
+         
+         
         </div>
       </center>
     </div>
