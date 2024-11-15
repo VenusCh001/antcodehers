@@ -197,7 +197,7 @@ export default function Addnote(props) {
           color: white;
           transition: background-color 0.3s ease;
           border-radius: 10px;
-          width: 100%;
+          width: 40%;
         }
         .btn-primary:disabled {
           background-color: #b3daff;
@@ -265,7 +265,7 @@ export default function Addnote(props) {
         }
       `}</style>
 
-      <div className="addnote-box my-5">
+      <div className="addnote-box ">
         <h2>Add a New Note</h2>
         <label htmlFor="language-select">Select Language:</label>
         <select id="language-select" onChange={changeLanguage} value={language}>

@@ -59,7 +59,7 @@ function App() {
       <NoteSate>
         <Router>
           <Navbar /> {/* Navbar */}
-          <LoadingBar color='#4169e1' ref={loadingBarRef} height={3}/>
+          {/* <LoadingBar color='#4169e1' ref={loadingBarRef} height={3}/> */}
           <LoadingBarHandler />
 
           <div className='container'>
