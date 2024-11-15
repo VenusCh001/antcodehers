@@ -1,6 +1,4 @@
-
-
-
+/* 
 .navbar {
     padding: 10px;
     
@@ -12,7 +10,7 @@
     height: 1%;
     font-weight: bold;
     border-radius: 50px;
-    /* margin-top: 10px; */
+    /* margin-top: 10px; 
     margin-left: 15px;
     margin-right: 15px;
     
@@ -46,9 +44,6 @@
 }
 
 
-
-
-
 .cta-button {
     padding: 15px 30px;
     background-color: #6c63ff;
@@ -74,7 +69,6 @@
     text-transform: uppercase;
 }
 
-/* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -101,7 +95,6 @@
     width: 100%; 
 }
 
-/* Custom CSS to ensure the navbar behaves well on mobile */
 .navbar-nav {
     margin-left: auto;
   }
@@ -111,7 +104,7 @@
   }
   
   .navbar-light .navbar-toggler-icon {
-    background-color: rgb(216, 122, 122); /* Adjust color if needed */
+    background-color: rgb(216, 122, 122); 
   }
   
   @media (max-width: 768px) {
@@ -128,4 +121,129 @@
       font-weight: bold;
     }
   }
-  
+   */
+   /* Base navbar styling */
+.navbar {
+    padding: 5px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #8f8af7; /* Your primary color */
+    position: relative;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 10px 15px;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-part-2 {
+    padding: 5px 5px;
+    border: 2px solid #1b4da3;
+    clip-path: polygon(1% 0%, 100% 0%, 99% 100%, 0% 100%);
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links li {
+    /* Optionally add margin or padding to increase the spacing between individual items */
+    margin-right: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 1.2rem;
+    
+}
+
+.nav-links li a:hover {
+    color: #54ebac; /* Highlight color on hover */
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #36aa79;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Button styles (Login & Sign Up) */
+.cta-button,
+.btn-secondary {
+    padding: 10px 20px;
+    background-color:#54ebac; /* Button primary color */
+    color: #0e1e2e;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+.cta-button:hover,
+.btn-secondary:hover {
+    background-color: #34de4b; /* Hover color */
+}
+
+/* Custom Navbar for mobile responsiveness */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: rgb(216, 122, 122);
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        margin-top: 100px;
+    }
+
+    .navbar-nav .active {
+        font-weight: bold;
+    }
+
+    .cta-button,
+    .btn-secondary {
+        width: 100%; /* Full-width buttons on small screens */
+    }
+}
