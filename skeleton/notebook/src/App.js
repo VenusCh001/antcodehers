@@ -19,7 +19,7 @@ import Contact from './components/Contact';
 import LandingPage from './components/LandingPage';
 import Mood_tracker from './components/Mood_tracker';
 import Immersive from './components/immersive';
-import LoadingBar from 'react-top-loading-bar';
+//import LoadingBar from 'react-top-loading-bar';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -60,7 +60,6 @@ function App() {
         <Router>
           <Navbar /> {/* Navbar */}
           <LoadingBarHandler />
-          <LoadingBar color="blue" ref={loadingBarRef} height={3} /> {/* Loading Bar below Navbar */}
 
           <div className='container'>
             <Routes>
