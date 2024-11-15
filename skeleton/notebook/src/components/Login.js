@@ -77,7 +77,7 @@ export default function Login(props) {
                                 <input type="checkbox" className="form-check-input" id="rememberMe" />
                                 <label className="form-check-label" for="rememberMe">Remember me</label>
                             </div>
-                            <button disabled={credentials.password.length < 4} type="submit" className="btn btn-primary " >Login</button>
+                            <button disabled={credentials.password.length < 4} type="submit" className="btn btn-primary bg-success" >Login</button>
                         </form>
                         <div className="d-flex justify-content-between mt-3">
                             <a href="#" class="text-decoration-none text-small">Forgot Password?</a>
