@@ -94,8 +94,8 @@ front.css
 
 
 
-/* Navigation links */
-/* .nav-links {
+ 
+.nav-links {
     list-style: none;
     display: flex;
     gap: 70px;
@@ -104,9 +104,9 @@ front.css
     text-decoration: none;
     color: #0e1e2e;
     position: relative;
-} */
+} 
 
-/* .nav-links li a::after {
+.nav-links li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -119,7 +119,7 @@ front.css
 
 .nav-links li a:hover::after {
     width: 100%; 
-} */
+}
 .gallery {
     text-align: center;
     padding: 5px 10%;
