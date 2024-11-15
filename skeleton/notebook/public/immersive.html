@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peace</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
 <body>
@@ -45,9 +45,11 @@
 
 
     <!--check in flags-->
-    <a-image src="#q1" rotation="0 20 0" position="-2 1 9" scale="1.5 2 1" material="" geometry=""></a-image>
-    <a-image src="#q2" rotation="0 -20 0"position="2 1 6" scale="1.5 2 1"></a-image>
-    <a-image src="#q3" rotation="0 20 0" position="-1.5 1 3" scale="1.5 2 1"></a-image>
+    <!-- Plane for displaying the quote -->
+     <a-plane id="plane1" rotation="0 20 0" position="-4 1 9" scale="1.5 2 1" width="2" height="1.5" color="#FFC65D" ></a-plane>
+     <a-plane id="plane2" rotation="0 -20 0" position="4 1 5" scale="1.5 2 1" width="2" height="1.5" color="#7BC8A4"></a-plane>
+     <a-plane id="plane3" rotation="0 20 0" position="-2 1 3" scale="1.5 2 1" width="2" height="1.5" color="#F16745"></a-plane>
+
 
     <!--front pics-->
     <a-image src="#front2" position="1.9653 2.13893 -6.28064 " scale="1.5 1.5 1"></a-image>
@@ -68,6 +70,7 @@
  
 
 <!--magic portals-->
+
 <a-link   href="https://www.bookswagon.com/#" target="_blank" title="smell the pages " rotation="0 90 0" position="-3 1.93886 -12.45811" image="#portal1" scale="0.5 0.5 0.5" ></a-link>
 
 <a-link  href="https://theootychocolates.com/" title="choco bliss" rotation="0 90 0" position="-3 1.93886 -10.5.45811" image="#portal2" scale="0.5 0.5 0.5"></a-link>
@@ -85,14 +88,14 @@
     <a-plane position="0 2.17956 -13" rotation="-90 0 0" width="4" height="2" color="#333"></a-plane>
     
     <!-- Text entity to display the quote -->
-    <a-entity id="quote-text" position="0 2.17956 -13" text="color: black; align: center; width: 3.5"></a-entity>
+    <a-entity id="quote-text" position="0 2.17956 -13" text="color: black; align: center; width: 3.5; font:mozillavr"></a-entity>
   
   
 
 
 <script>
    
-    // Function to fetch a random quote from the Quotable API
+     
     function getRandomQuote() {
         fetch('http://api.quotable.io/random')
             .then(response => response.json())
@@ -109,6 +112,85 @@
 
     // Initial load of a random quote
     getRandomQuote();
+
+
+      // Array of mindful questions
+      const questions = [
+        "How are you feeling right now?",
+    "What made you smile today?",
+    "What are you grateful for at this moment?",
+    "What is something you would like to improve?",
+    "Are you feeling stressed? Why?",
+    "What is one positive thing about today?",
+    "What’s a small goal you can achieve today?",
+    "Who or what brings joy into your life?",
+    "How can you be kinder to yourself today?",
+    "What is one thing you love about yourself?",
+    "What’s a recent challenge you overcame, and how did you do it?",
+    "What motivates you to keep going?",
+    "What does happiness mean to you?",
+    "How do you take care of your mental health?",
+    "What are three things you’re thankful for today?",
+    "What’s one thing you can let go of to feel lighter?",
+    "What does success look like for you?",
+    "How do you handle moments of frustration or anger?",
+    "What’s a memory that always makes you smile?",
+    "What is one thing you can do to help someone else today?",
+    "What’s your favorite way to relax and unwind?",
+    "What’s something you’ve accomplished recently that you’re proud of?",
+    "What is one thing you’ve learned about yourself this week?",
+    "How can you show more compassion to others today?",
+    "What is something you’ve been putting off that you can tackle now?",
+    "How do you define inner peace?",
+    "What is one thing you are excited about for the future?",
+    "How do you recharge your energy when feeling drained?",
+    "What’s your favorite way to express your creativity?",
+    "What is something that makes you feel calm and at ease?",
+    "What is a goal you can work toward this week?",
+    "Who is someone you appreciate, and why?",
+    "What’s one positive change you’ve made in your life recently?",
+    "How do you celebrate small wins?",
+    "What’s a habit you’d like to build, and why?",
+    "What’s a book, movie, or activity that brings you joy?",
+    "What is one way you can connect with nature today?",
+    "How do you create balance in your daily routine?",
+    "What does self-care look like for you right now?"
+      ];
+
+      // Function to get three random questions
+      function getRandomQuestions() {
+        const shuffled = questions.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 3);
+      }
+
+      // Display questions on the planes
+      function displayQuestions() {
+        const [q1, q2, q3] = getRandomQuestions();
+
+        // Set the text component on each plane
+        document.getElementById("plane1").setAttribute("text", {
+          value: q1,
+          align: "center",
+          color: "black",
+          width: 2
+        });
+        document.getElementById("plane2").setAttribute("text", {
+          value: q2,
+          align: "center",
+          color: "black",
+          width: 2
+        });
+        document.getElementById("plane3").setAttribute("text", {
+          value: q3,
+          align: "center",
+          width: 2,
+          color: "black"
+        });
+      }
+
+      // Call displayQuestions on page load
+      displayQuestions();
+    
 </script>
 
 

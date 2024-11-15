@@ -2,7 +2,7 @@
 <html>
   <body>
     <!-- As if this Glitch were a typical HTML CodePen... -->    
-    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     
     <!-- Use components defined in separate files. -->
     <script src="arrow-key-rotation.js"></script>
@@ -10,41 +10,56 @@
     <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script>
     <!-- Specify our scene. -->
     <a-scene>
-      
+     
        <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="cityTexture" src="https://cdn.glitch.com/45fdcef8-02ac-4e6d-8490-30e070fdc47f%2FSnip20190422_1.png?1555945959142">
         <img id="waterfallTexture" src="https://cdn.glitch.com/858eae5d-8353-4b6c-ab8a-4f4614fce5c5%2Fwaterfall.png?1555559418410">
         <img id="beachTexture" src="https://cdn.glitch.com/858eae5d-8353-4b6c-ab8a-4f4614fce5c5%2Fbeach.png?1555559420369">
         <!-- Single source video. -->
-        
-        
-        
-        
-        
-        
+
+        <!-- beach -->
         <video id="video0" style="display:none" 
-                loop crossorigin="anonymous" playsinline webkit-playsinline>
-          <!-- MP4 video source. 1-->
-          <source type="video/mp4"
+                loop crossorigin="anonymous" >
+                <source type="video/mp4"
                src="https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fbeach_mute.mp4?1555984765964" />
         </video>
+        
+        <!-- waterfall-->
         <video id="video1" style="display:none" 
-               loop crossorigin="anonymous" playsinline webkit-playsinline>
-          <!-- MP4 video source.2 -->
+               loop crossorigin="anonymous" >
           <source type="video/mp4"
-               src="https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fwaterfall_mute.mp4?1555985037420" />
+               src="https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/47949-452600582_small.mp4?v=1731428093331" />
         </video>
+
+        <!-- city-->
         <video id="video2" style="display:none" 
-               loop crossorigin="anonymous" playsinline webkit-playsinline>
-          <!-- MP4 video source. 3-->
+               loop crossorigin="anonymous" >
           <source type="video/mp4"
                src="https://cdn.glitch.com/9db9d832-1b43-4aeb-b5f8-6ccfd25c6c5b%2Fcity_mute.mp4?1555983860103" />
         </video>
+
+        <!--scenery-->
+        <video id="video3" style="display:none" 
+               loop crossorigin="anonymous" >
+          <source type="video/mp4"
+               src="https://cdn.glitch.me/72f99422-7626-44cc-8e53-7dea88894785/vecteezy_a-beautiful-scenery-of-a-hill-in-lessinia-a-nature-reserve_17448009.mov?v=1731419013572" />
+        </video>
+
+        <!--scenery-->
+        <video id="video4" style="display:none" 
+               loop crossorigin="anonymous" >
+          <source type="video/mp4"
+               src="https://cdn.glitch.me/72f99422-7626-44cc-8e53-7dea88894785/vecteezy_a-beautiful-scenery-of-a-hill-in-lessinia-a-nature-reserve_17448009.mov?v=1731419013572" />
+        </video>
+        
         
         <audio id="audio0" src = "https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fbeach_human_voice_2_audio.mp3?1555984827864" ></audio>
         <audio id="audio1" src = "https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fwaterfall_human_voice_2_audio.mp3?1555985092677" ></audio>
         <audio id="audio2"  src = "https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fcity_human_voice_2_audio.mp3?1555984127541" ></audio>
+        <audio id="audio3"  src = "https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fwaterfall_human_voice_2_audio.mp3?1555985092677" ></audio>
+        <audio id="audio4"  src = "https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/5-minute-calming-meditation-with-guiding-voice.mp3?v=1731658766370" ></audio>
+
         <audio id="bgm"  src = "https://cdn.glitch.com/b95b2b9d-52d2-4c16-8b75-ef0496cdff35%2Fyzs_bgm.mp3?1556032774069" ></audio>    
         <audio id="voiceover"   src = "https://cdn.glitch.com/858eae5d-8353-4b6c-ab8a-4f4614fce5c5%2Fhome.mp3?1555616741449" ></audio>  
       </a-assets>
@@ -58,8 +73,7 @@
                      play-on-window-click
                      play-on-vrdisplayactivate-or-enter-vr>
       </a-videosphere>
-      <!--<a-sound id = "sound" volume = "3" src="#audio" autoplay="true"
-    position="0 0 0" play-on-window-click ></a-sound>-->
+      
       
       <a-sphere onclick = "changeScene()" position="0 -5 0" radius="1.25" color="#ffffff" visible = "true"></a-sphere>
       
@@ -106,12 +120,30 @@
                 value: City;
                 font: exo2semibold;">
         </a-entity>
+
+        <a-sphere src = "#beachTexture" onclick = "start(3)" position = "9 6 -10"></a-sphere>
+      <a-entity id="cityText" position="8.5 4 -9" text="align:center; 
+                width:20;
+                wrapCount:100;
+                color:white;
+                value: Scenery;
+                font: exo2semibold;"
+                >
+        </a-entity>
+
+        <a-sphere src = "#groundTexture" onclick = "start(4)" position = "-9 6 -10"></a-sphere>
+      <a-entity id="cityText" position="-8.5 4 -9" text="align:center; 
+                width:20;
+                wrapCount:100;
+                color:white;
+                value: cosmic;
+                font: exo2semibold;"
+                >
+        </a-entity>
       
-      <!--<a-cylinder color="white" material="side: double" position="6 0 -10" height = "0.2" open-ended="true" rotation="90 -10 0"></a-cylinder>
-      <a-cylinder color="black" material="side: double" position="0 0 -8" open-ended="true" rotation="90 0 0"></a-cylinder>
-      <a-cylinder color="black" material="side: double" position="0 0 -6" open-ended="true" rotation="90 0 0"></a-cylinder>-->
       
-      <a-cylinder color="grey" onclick = "start(0)" material="side: double" radius="2" position="0 -7 -6"  side="double" rotation="40 -20 0"></a-cylinder>
+      
+      <a-cylinder color="white" onclick = "start(0)" material="side: double" radius="2" position="0 -7 -6"  side="double" rotation="40 -20 0"></a-cylinder>
          <a-entity id="startText" position="0 -4 -3.2"  text="align:center; 
                 width:30;
                 wrapCount:100;
@@ -119,21 +151,15 @@
                 value: START;
                 font: exo2semibold;">
       </a-entity>
-       
-      
-      <!--<a-entity id="refresh-button" geometry="primitive: box" material="color: white" position="0 -2 -4"></a-entity>
-      <a-plane rotation="-10 0 0"></a-plane>
-      <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane>-->
       
       
       
-      <a-entity size="1" position="0 0 0" text-geometry="value: What's up"></a-entity>      
       
         <a-entity id="Title" position="0 0.5 -1.5" text="align:center; 
                 width:8;
                 wrapCount:100;
                 color:white;
-                value: Mindfulness Meditation;
+                value: Meditation Room;
                 font: exo2bold;">
         </a-entity>
       </a-entity>
@@ -166,7 +192,6 @@
             material="color: grey; shader: flat">
         </a-entity>  
       </a-camera>
-      <!-- Wait for the video to load. -->
      
     </a-scene>
     
