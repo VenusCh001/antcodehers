@@ -1,11 +1,12 @@
-.container {
+
+  .container {
     max-width: 1000px;
     margin: 10px auto;
     font-family: Arial, sans-serif;
     text-align: center;
-    
+    background-color: #f9f9f9;
     border-radius: 10px;
-    
+    box-shadow: 0px 4px 8px rgba(33, 91, 178, 0.1);
     padding: 20px;
   }
   
@@ -31,16 +32,16 @@
     width: 40%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ebebef;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #e9e7f3;
     transition: all 0.3s ease;
     margin-bottom: 15px;
   }
   
   select:focus {
     outline: none;
-    border-color: #5d53e4;
+    border-color: #c1bee4;
     box-shadow: 0px 0px 4px #508ccd;
   }
   
