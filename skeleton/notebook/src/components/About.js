@@ -18,56 +18,52 @@ export default function About() {
             alt="Chat Support"
           />
           <div className="card-content">
-            <h3>Chat Support</h3>
+            <h3 class="card-heading">Chat Support</h3>
             <p>
               Our chatbot offers a safe space for mental health support, providing
-              mindfulness techniques. It also addresses personal questions with
-              tailored guidance.
+              mindfulness techniques. 
             </p>
           </div>
         </div>
 
         <div className="card">
           <img
-            src="https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2022/09/21101527/STILL_002.jpg"
+            src="https://static.vecteezy.com/system/resources/previews/031/400/087/large_2x/immersive-simulation-icon-design-vector.jpg"
             alt="Immersive Meditation Space 1234"
           />
           <div className="card-content">
-            <h3>Immersive Meditation Space</h3>
+            <h5 class="card-heading">Immersive Space</h5>
             <p>
-              An immersive meditation space promotes mental well-being by creating a
-              tranquil environment that enhances focus and relaxation. It provides a
-              sanctuary to reduce stress and enhance emotional balance.
+              An immersive space promotes mental well-being by creating a
+              tranquil environment that enhances relaxation.
             </p>
           </div>
         </div>
 
         <div className="card">
-          <img
-            src="https://www.pngmart.com/files/23/Notepad-PNG-Isolated-Photos.png"
-            alt="INote Book"
+        <img
+            src="https://i.pinimg.com/originals/3f/43/65/3f436522b06c3d8be18e2a0948167597.jpg"
+            alt="NoteBook"
           />
+          
           <div className="card-content">
-            <h3>INote Book</h3>
+            <h3 class="card-heading">INote Book</h3>
             <p>
-              A mental health notebook is a dedicated space for individuals to
-              express their thoughts and feelings, track emotions. It encourages
-              personal growth by allowing users to document their journey.
+              A mental health notebook is a dedicated space for individuals . It encourages
+              users to document their journey.
             </p>
           </div>
         </div>
 
         <div className="card">
           <img
-            src="https://i.ytimg.com/vi/vjQ4F6dPPDk/maxresdefault.jpg"
+            src="https://thumbs.dreamstime.com/b/mood-monitoring-gradient-linear-vector-icon-mobile-app-health-tracking-internet-things-smart-gadget-thin-line-color-symbol-240375368.jpg"
             alt="Mood Tracker"
           />
           <div className="card-content">
-            <h3>Mood Tracker</h3>
+            <h3 class="card-heading">Mood Tracker</h3>
             <p>
-              A mood tracker is a valuable tool for monitoring emotional patterns and
-              identifying triggers. By regularly recording moods, users gain insights
-              into emotional fluctuations, recognizing both positive and negative
+              A mood tracker is a valuable tool. By regularly recording moods, users recognizing both positive and negative
               trends.
             </p>
           </div>
@@ -79,12 +75,10 @@ export default function About() {
             alt="HelpLine Support"
           />
           <div className="card-content">
-            <h3>HelpLine Support</h3>
+            <h5 class="card-heading">HelpLine Support</h5>
             <p>
               Helpline support for mental health offers immediate assistance,
-              providing a safe space for individuals to share their concerns. It
-              connects people with trained professionals for guidance and emotional
-              support in times of need.
+              space for individuals to share their concerns. 
             </p>
           </div>
         </div>
