@@ -97,6 +97,10 @@
 
 
 
+
+
+
+
 import React, { useContext, useState } from 'react';
 import noteContext from './context/Notecontext';
 
@@ -108,7 +112,6 @@ export default function Addnote(props) {
   const [showKeyboard, setShowKeyboard] = useState(false); // Controls when the keyboard is visible
   const [focusedField, setFocusedField] = useState(''); // Tracks the focused field
 
-  // Hindi keyboard layout
   const hindiKeyboard = [
     'क', 'ख', 'ग', 'घ', 'च', 'छ', 'ज', 'झ', 'ट', 'ठ',
     'ड', 'ढ', 'ण', 'त', 'थ', 'द', 'ध', 'न', 'प', 'फ',
@@ -117,14 +120,12 @@ export default function Addnote(props) {
     'ं', 'ः', 'ऋ', 'ळ', 'क्ष', 'ज्ञ', 'त्र', 'श्र', ' ', ' '
   ];
 
-  // Handles language selection
   const changeLanguage = (e) => {
     const selectedLang = e.target.value;
     setLanguage(selectedLang);
-    setShowKeyboard(selectedLang === 'hi'); // Show keyboard only for Hindi
+    setShowKeyboard(selectedLang === 'hi');
   };
 
-  // Handles keyboard key press for the focused field
   const handleKeyPress = (key) => {
     setNote((prevNote) => ({
       ...prevNote,
@@ -132,7 +133,6 @@ export default function Addnote(props) {
     }));
   };
 
-  // Form submission
   const handleclick = (e) => {
     e.preventDefault();
     addNote(note.title, note.description, note.tag);
@@ -140,7 +140,6 @@ export default function Addnote(props) {
     props.showAlert('Added successfully', 'success');
   };
 
-  // Handles onChange for direct input
   const onchange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
@@ -152,12 +151,12 @@ export default function Addnote(props) {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh;
           padding: 20px;
+          width: 100%;
         }
         .addnote-box {
           background-color: white;
-          padding: 40px;
+          padding: 30px;
           border-radius: 20px;
           box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
           max-width: 700px;
@@ -166,7 +165,7 @@ export default function Addnote(props) {
         h2 {
           text-align: center;
           color: #2980b9;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           font-family: 'Poppins', sans-serif;
           font-size: 28px;
         }
@@ -226,6 +225,43 @@ export default function Addnote(props) {
         }
         .mb-3 {
           margin-bottom: 25px;
+        }
+        @media (max-width: 768px) {
+          .addnote-box {
+            padding: 20px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+          .form-control {
+            padding: 10px;
+            font-size: 14px;
+          }
+          .btn-primary {
+            padding: 10px 20px;
+            font-size: 16px;
+          }
+          .key {
+            padding: 8px;
+            font-size: 14px;
+          }
+        }
+        @media (max-width: 480px) {
+          h2 {
+            font-size: 20px;
+          }
+          .form-control {
+            padding: 8px;
+            font-size: 12px;
+          }
+          .btn-primary {
+            font-size: 14px;
+            padding: 10px;
+          }
+          .key {
+            padding: 6px;
+            font-size: 12px;
+          }
         }
       `}</style>
 
@@ -295,6 +331,3 @@ export default function Addnote(props) {
     </div>
   );
 }
-
-
-
