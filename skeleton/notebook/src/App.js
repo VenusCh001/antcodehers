@@ -19,7 +19,7 @@ import Contact from './components/Contact';
 import LandingPage from './components/LandingPage';
 import Mood_tracker from './components/Mood_tracker';
 import Immersive from './components/immersive';
-//import LoadingBar from 'react-top-loading-bar';
+import LoadingBar from 'react-top-loading-bar';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -59,6 +59,7 @@ function App() {
       <NoteSate>
         <Router>
           <Navbar /> {/* Navbar */}
+          <LoadingBar color='#4169e1' ref={loadingBarRef} height={3}/>
           <LoadingBarHandler />
 
           <div className='container'>
