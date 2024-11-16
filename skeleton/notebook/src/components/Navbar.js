@@ -241,7 +241,7 @@ export default function Navbar() {
                 className={`nav-link ${location.pathname === '/home' ? 'active' : ''}`}
                 to="/home"
               >
-                Personal
+                Notebook
               </Link>
             </li>
             <li className="nav-item">
