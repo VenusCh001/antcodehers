@@ -62,7 +62,7 @@ const LandingPage = () => {
                             <ambientLight intensity={1} />
                             <directionalLight position={[10, 10, 5]} intensity={1} />
                             <Model url="https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/A_butterfly_fairy_H_1115152627_refine.glb?v=1731684551186" />
-                            <OrbitControls />
+                            <OrbitControls />.
                         </Canvas>
                     </div>
                 </div>
