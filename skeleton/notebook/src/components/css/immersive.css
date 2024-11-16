@@ -1,18 +1,40 @@
-/* immersive.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    overflow-x: hidden; /* Ensures no horizontal scrolling */
+    
+    overflow-x: hidden;
+
+}
+.image-container {
+    flex: 0 0 30%; /* Reserve 30% width for the image */
+    max-width: 500px; /* Limit the maximum width of the image */
+    display: flex;
+    margin-left: -60px;
+    margin-top: 50px;
+    justify-content: left;
+    align-items: left;
+    padding: 20px;
+    background-color: #f5f5f5; /* Optional: Add a subtle background */
 }
 
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+.content-container{
+    margin-top: -350px; 
+    margin-left: 500px;
+}
 .centered-container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 40px; /* Instead of fixed height, using margin-top to create space */
+   
 }
 
 .heading {
@@ -47,14 +69,14 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 80px;
     gap: 20px;
 }
 
 .btn-tour {
     background-color: #3498db;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 30px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -66,13 +88,13 @@ body {
     background-color: #2980b9;
 }
 
-/* Fix for scrolling issue */
+
 html, body {
-    height: 100%; /* Ensures the body takes the full height */
-    overflow-y: auto; /* Allows vertical scrolling */
+    height: 100%; 
+    overflow-y: auto; 
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .heading {
         font-size: 2.5rem;
@@ -92,6 +114,6 @@ html, body {
         font-size: 0.9rem;
     }
     .centered-container {
-        margin-top: 40px; /* Adds more space on mobile for better visual balance */
+        margin-top: 40px; 
     }
 }

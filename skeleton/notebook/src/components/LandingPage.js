@@ -1,4 +1,5 @@
 
+// export default LandingPage;
 import React, { useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
@@ -10,47 +11,56 @@ function Model({ url }) {
 }
 
 const LandingPage = () => {
-  const [typewriterText, setTypewriterText] = useState("");
+    const [typewriterText, setTypewriterText] = useState("");
   const text = "It's okay to not be okay.\nTogether, we'll find your way to a healthier and happier you.";
 
   useEffect(() => {
     let index = 0;
-    const interval = setInterval(() => {
-      setTypewriterText((prev) => prev + text[index]);
-      index++;
-      if (index === text.length) clearInterval(interval);
-    }, 100); // Speed of typing effect
-    return () => clearInterval(interval);
-  }, []);
+    let interval;  // Declare interval here for cleanup
 
-  return (
-    <div className="landing-page">
-      <section className="hero">
-        <div className="hero-container">
-          <div className="hero-content">
-            <h1 className="underline">Mind Mates</h1>
-            <p className="typewriter">
-              {typewriterText.split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
-            </p>
-            <button className="cta-button">"Be Happy"</button>
-          </div>
-          <div className="hero-image">
-            <Canvas style={{ width: '100%', height: '400px' }}>
-              <ambientLight intensity={1} />
-              <directionalLight position={[10, 10, 5]} intensity={1} />
-              <Model url="https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/A_butterfly_fairy_H_1115152627_refine.glb?v=1731684551186" />
-              <OrbitControls />
-            </Canvas>
-          </div>
-        </div>
-      </section>
+    // Function to restart the typing animation
+    const typeWriterEffect = () => {
+      setTypewriterText("");  // Reset the text
+      index = 0;  // Reset index to start typing from the beginning
+      interval = setInterval(() => {
+        setTypewriterText((prev) => prev + text[index]);
+        index++;
+        if (index === text.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            typeWriterEffect();  // Restart typing after a small delay
+          }, 1000);  // Delay before restarting (optional)
+        }
+      }, 100); // Speed of typing effect
+    };
 
-      <section className="gallery">
+    typeWriterEffect();  // Start typing effect on load
+
+    return () => clearInterval(interval);  // Cleanup interval on unmount
+  }, []); // Empty dependency array ensures this effect runs once on component mount
+
+    return (
+        <div className="landing-page">
+            <section className="hero">
+                <div className="hero-container">
+                    <div className="hero-content">
+                        <h1>Mind Mates</h1>
+                        <p>"It's okay to not be okay. Together, we'll find your way to a healthier and happier you."</p>
+                        <button className="cta-button">Button Name</button>
+                    </div>
+                    <div className="hero-image">
+                        {/* React Three Fiber Canvas for 3D Model */}
+                        <Canvas style={{ width: '100%', height: '400px' }}>
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[10, 10, 5]} intensity={1} />
+                            <Model url="https://cdn.glitch.global/72f99422-7626-44cc-8e53-7dea88894785/A_butterfly_fairy_H_1115152627_refine.glb?v=1731684551186" />
+                            <OrbitControls />.
+                        </Canvas>
+                    </div>
+                </div>
+            </section>
+  
+<section className="gallery">
         <h2>Our Mission</h2>
         <p>"Mental Health Matters -- Every Mind, Every Journey."</p>
         <div className="gallery-images">
@@ -61,7 +71,9 @@ const LandingPage = () => {
         </div>
       </section>
     </div>
+ 
   );
 }
 
 export default LandingPage;
+

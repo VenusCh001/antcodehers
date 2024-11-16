@@ -116,7 +116,7 @@ h1::after {
 /* Card container styling */
 .card-container {
     display: flex;
-    margin-left: 9px;
+    margin-left: -170px;
     gap: 30px;
     padding: 20px;
     background-color: transparent;
@@ -164,7 +164,7 @@ h1::after {
 }
  .card-content h5 {
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-top: 52px;
     font-weight: bold;
     color: #333;
 }
@@ -189,6 +189,9 @@ h1::after {
         height: 90px;
     }
     .card-content h3 {
+        font-size: 1.2rem;
+    }
+    .card-content h5 {
         font-size: 1.2rem;
     }
     .card-content p {
