@@ -1,5 +1,6 @@
 import noteContext from "./Notecontext";
 import { useState } from "react";
+
 const NoteSate = (props) => {
     const host = "http://localhost:5000"
     const notesInitial = []
@@ -50,6 +51,7 @@ const NoteSate = (props) => {
         console.log("note has been deleted")
         const newnotes = notes.filter((note) => { return note._id !== id })
         setnotes(newnotes)
+       
     }
     // Edit a note
     const EditNote = async (id, title, description, tag) => {

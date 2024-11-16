@@ -1,68 +1,119 @@
-import React from 'react';
-import "./css/immersive.css";
+// import React from 'react';
+// import "./css/immersive.css";
 
-const Immersive = () => {
-  return (
-    <div>
-      <div className="centered-container">
-        <h1 className="heading">INSTRUCTION</h1>
-      </div>
-      <center>
-        <p className="subheading">
-          <ul>
-            <li>1.use arrow keys to falana dhimakanananflfsf </li>
-            <li>2.use arrow keys to falana dhimakanananflfsf </li>
-            <li>3.use arrow keys to falana dhimakanananflfsf </li>
+// const Immersive = () => {
+//   return (
+//     <div>
+//       <div className="centered-container">
+//         <h1 className="heading">INSTRUCTION</h1>
+//       </div>
+//       <center>
+//         <p className="subheading">
+//           <ul>
+//             <li>1.use arrow keys to falana dhimakanananflfsf </li>
+//             <li>2.use arrow keys to falana dhimakanananflfsf </li>
+//             <li>3.use arrow keys to falana dhimakanananflfsf </li>
 
-          </ul>
+//           </ul>
 
-        </p>
-      </center>
-      <center>
-        <div className="buttons">
-          <a href="immersive.html">
-            <button className="btn-tour">Virtual Room   </button>
-          </a>
-          <a href="/meditationroom/index.html">
-            <button className="btn-tour">Meditation room  </button>
-          </a>
-        </div>
+//         </p>
+//       </center>
+//       <center>
+//         <div className="buttons">
+//           <a href="immersive.html">
+//             <button className="btn-tour">Virtual Room   </button>
+//           </a>
+//           <a href="/meditationroom/index.html">
+//             <button className="btn-tour">Meditation room  </button>
+//           </a>
+//         </div>
 
-        { /* <div className="buttons">
-            <button className="btn-tour" href="immersive.html" >Become a Member</button>
-            <button className="btn-tour">Schedule a Tour</button>
-         </div> */}
-      </center>
+        
+//       </center>
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default Immersive;
+// export default Immersive;
+
 
 
 // import React from 'react';
 // import "./css/immersive.css";
 
 // const Immersive = () => {
+ 
 //   return (
-//     <div className="immersive-container">
-//       <div className="overlay">
-//         <h1 className="heading">ARE YOU READY?</h1>
-//         <p className="subheading">
-//           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-//           ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-//         </p>
-//         <a href="immersive.html"  rel="noopener noreferrer">
-//          Go to the HTML page
-//        </a>
-//         <div className="buttons">
-//           <button className="btn-member">Become a Member</button>
-//           <button className="btn-tour">Schedule a Tour</button>
-//         </div>
+//     <div>
+//       <div className="centered-container">
+//         <h1 className="heading">INSTRUCTION</h1>
 //       </div>
+//       <center>
+//         <p className="subheading">
+//           <ul>
+//             <li>1. Use arrow keys to falana dhimakanananflfsf</li>
+//             <li>2. Use arrow keys to falana dhimakanananflfsf</li>
+//             <li>3. Use arrow keys to falana dhimakanananflfsf</li>
+//           </ul>
+//         </p>
+//       </center>
+//       <center>
+//         <div className="buttons">
+//           <a href="immersive.html">
+//             <button className="btn-tour">Virtual Room</button>
+//           </a>
+//           <a href="/meditationroom/index.html">
+//             <button className="btn-tour">Meditation Room</button>
+//           </a>
+         
+         
+//         </div>
+//       </center>
 //     </div>
 //   );
 // };
 
 // export default Immersive;
+
+import React from 'react';
+import "./css/immersive.css";
+
+const Immersive = () => {
+  return (
+    <div>
+      <div className="image-container">
+        <img
+          src="https://img.freepik.com/premium-photo/immersive-3d-mobile-application-development-concept_956920-13095.jpg"
+          alt="Immersive Concept"
+        />
+      </div>
+      <div className="content-container">
+        <div className="centered-container">
+          <h1 className="heading">INSTRUCTION</h1>
+        </div>
+        <center>
+          <p className="subheading">
+            <ul>
+              <li>1. Use arrow keys to falana dhimakanananflfsf</li>
+              <li>2. Use arrow keys to falana dhimakanananflfsf</li>
+              <li>3. Use arrow keys to falana dhimakanananflfsf</li>
+            </ul>
+          </p>
+        </center>
+        <center>
+          <div className="buttons">
+            <a href="immersive.html">
+              <button className="btn-tour">Virtual Room</button>
+            </a>
+            <a href="/meditationroom/index.html">
+              <button className="btn-tour">Meditation Room</button>
+            </a>
+          </div>
+        </center>
+      </div>
+    </div>
+  );
+};
+
+export default Immersive;
