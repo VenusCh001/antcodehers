@@ -104,7 +104,7 @@ function Model({ url }) {
 
 const LandingPage = () => {
   const [typewriterText, setTypewriterText] = useState("");
-  const text = "It's okay to not be okay.\nTogether, we'll find your way to a healthier and happier you.";
+  const text = "  It's okay to not be okay.\nTogether, we'll find your way to a healthier and happier you.";
 
   useEffect(() => {
     let index = 0;
