@@ -158,7 +158,7 @@
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 80px;
 }
 .nav-links li {
     /* Optionally add margin or padding to increase the spacing between individual items */
