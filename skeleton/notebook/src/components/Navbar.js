@@ -260,6 +260,15 @@ export default function Navbar() {
                 Mood Tracker
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </li>
+            {/* <li><Link href="static_pages/contact.html" class="get-started">HELPLINE</Link></li> */}
           </ul>
           {!localStorage.getItem('token') ? (
             <form>
