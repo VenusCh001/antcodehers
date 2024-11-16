@@ -46,7 +46,7 @@ const LandingPage = () => {
                     <div className="hero-content">
                         <h1>Mind Mates</h1>
                         <p>"It's okay to not be okay. Together, we'll find your way to a healthier and happier you."</p>
-                        <button className="cta-button">Button Name</button>
+                        <button className="cta-button">Be</button>
                     </div>
                     <div className="hero-image">
                         {/* React Three Fiber Canvas for 3D Model */}
