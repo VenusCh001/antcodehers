@@ -103,7 +103,8 @@
 
 import React, { useContext, useState } from 'react';
 import noteContext from './context/Notecontext';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Addnote(props) {
   const context = useContext(noteContext);
   const { addNote } = context;
@@ -138,6 +139,9 @@ export default function Addnote(props) {
     addNote(note.title, note.description, note.tag);
     setNote({ title: '', description: '', tag: '' });
     props.showAlert('Added successfully', 'success');
+    // toast.success("Login Successful!", { position: "top-center" });
+
+    
   };
 
   const onchange = (e) => {
@@ -327,6 +331,7 @@ export default function Addnote(props) {
         >
           Add Note
         </button>
+        <ToastContainer />
       </div>
     </div>
   );
