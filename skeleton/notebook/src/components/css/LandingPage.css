@@ -463,6 +463,11 @@ body {
     bottom: -500px; 
     left: 0;
 }
+.gallery-images img:nth-child(3) {
+  height: 300px; /* Set your desired height */
+  object-fit: cover; /* Maintain aspect ratio while filling the height */
+}
+
 
 
 
