@@ -95,9 +95,9 @@ const Immersive = () => {
         <center>
           <p className="subheading">
             <ul>
-              <li>1. Use arrow keys to falana dhimakanananflfsf</li>
-              <li>2. Use arrow keys to falana dhimakanananflfsf</li>
-              <li>3. Use arrow keys to falana dhimakanananflfsf</li>
+              <li>1. Use arrow keys to travel the website</li>
+              <li>2. upward and downward arrows = move front and back</li>
+              <li>3. use side arrow keys to travel sideways</li>
             </ul>
           </p>
         </center>

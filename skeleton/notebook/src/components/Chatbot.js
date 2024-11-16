@@ -18,6 +18,7 @@ const Chatbot = () => {
             src="http://localhost:4000" // Replace with your chatbot URL
             title="Chatbot"
             style={styles.iframe}
+            scrolling='no'
           ></iframe>
         </div>
       )}
